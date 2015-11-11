@@ -1,0 +1,33 @@
+﻿{
+    "port":  3128,
+    "logSize":  1000,
+    "ruleSets": [
+        {
+            "name": "Your Corporate Network",
+            "defaultGateway": "[system]",
+            "pingHost": "someServerOnTheNetwork",
+            "rules": [
+                {
+                    "gateway": "some.alternative.proxy:3128",
+                    "hostnames": [
+                        "superdevtool.io.notarealaddress",
+                        "something.else"
+                    ]
+                },
+                {
+                    "gateway": null,
+                    "hostnames": [
+                        "localhost",
+                        "corporate.domain"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "out of the office",
+            "defaultGateway": null,
+            "pingHost": null,
+            "rules": [ ]
+        }
+    ]
+}
